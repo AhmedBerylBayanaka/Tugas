@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+
 #include "include/person.hpp"
 #include "include/mahasiswa.hpp"
 #include "include/dosen.hpp"
@@ -32,31 +33,34 @@ int main()
 		cout << "  6. Tampilkan semua Tenaga Kependidikan" << endl;
 		cout << "-> Silahkan memilih salah satu: ";
 		cin >> menu_terpilih;
-		cin.ignore();
+		
 
 		switch (menu_terpilih) {
 			case 1:
 			{
 				string nrp,nama,departemen;
 				int id,dd,mm,yy,tahunmasuk,semesterke,skslulus;
+				 ++id;
 
 				cout << "Masukkan Nama 	:";
+				cin.ignore();
 				getline(cin,nama);
-				cout << "Masukkan Hari Lahir (angka) 	:";
+				cout << "Masukkan Hari Lahir (angka) :";
 				cin >> dd;
-				cout << "Masukkan Bulan Lahir (angka) 	:";
+				cout << "Masukkan Bulan Lahir (angka) :";
 				cin >> mm; 
-				cout << "Masukkan Tahun Lahir 	:";
+				cout << "Masukkan Tahun Lahir :";
 				cin >> yy;
-				cout << "Masukkan NRP 	:";
+				cout << "Masukkan NRP :";
 				cin >> nrp;
-				cout << "Masukkan Departemen 	:";
-				cin >> departemen;
-				cout << "Masukkan Tahun Masuk 	:";
+				cout << "Masukkan Departemen :";
+				cin.ignore();
+				getline(cin,departemen); 
+				cout << "Masukkan Tahun Masuk :";
 				cin >> tahunmasuk;
-				cout << "Masukkan Semester saat ini 	:";
+				cout << "Masukkan Semester saat ini :";
 				cin >> semesterke;
-				cout << "Masukkan SKS yang telah lulus 	:";
+				cout << "Masukkan SKS yang telah lulus :";
 				cin >> skslulus;
 
 				mahasiswa Mahasiswa(id,nama,dd,mm,yy,nrp,departemen,tahunmasuk,semesterke,skslulus);
@@ -68,17 +72,17 @@ int main()
 				string  nama, npp, departemen,pendidikan;
 				int id,dd, mm, yy;
 
-				cout << "Masukkan Nama 	:";
+				cout << "Masukkan Nama :";
 				cin >> nama;
-				cout << "Masukkan Hari Lahir (angka) 	:";
+				cout << "Masukkan Hari Lahir (angka) :";
 				cin >> dd;
-				cout << "Masukkan Bulan Lahir (angka) 	:";
+				cout << "Masukkan Bulan Lahir (angka) :";
 				cin >> mm; 
-				cout << "Masukkan Tahun Lahir 	:";
+				cout << "Masukkan Tahun Lahir :";
 				cin >> yy;
-				cout << "Masukkan NPP 	:";
+				cout << "Masukkan NPP :";
 				cin >> npp;
-				cout << "Masukkan Departemen 	:";
+				cout << "Masukkan Departemen :";
 				cin >> departemen;
 				cout << "Masukkan Pendidikan Terakhir :";
 				cin >> pendidikan;
@@ -92,11 +96,11 @@ int main()
 				string  nama, npp, unit;
 				int id,dd, mm, yy;
 
-				cout << "Masukkan Nama 	:";
+				cout << "Masukkan Nama :";
 				cin >> nama;
-				cout << "Masukkan Hari Lahir (angka) 	:";
+				cout << "Masukkan Hari Lahir (angka) :";
 				cin >> dd;
-				cout << "Masukkan Bulan Lahir (angka) 	:";
+				cout << "Masukkan Bulan Lahir (angka) :";
 				cin >> mm; 
 				cout << "Masukkan Tahun Lahir :";
 				cin >> yy;
@@ -112,7 +116,7 @@ int main()
 				break;
 			case 4:
 			{
-				for (unsigned i=0; i<= recMhs.size();i++)
+				for (unsigned i=0; i< recMhs.size();i++)
 				{
 					cout << "Nama Mahasiswa :"<< recMhs[i].getNama() << endl;
 					cout << "Tanggal lahir :"<< recMhs[i].getTglLahir() << "-" << recMhs[i].getBulanLahir() << "-"<< recMhs[i].getTahunLahir() << endl;
@@ -126,7 +130,7 @@ int main()
 				break;
 			case 5:
 			{
-				for (unsigned i=0; i<= recDosen.size();i++)
+				for (unsigned i=0; i< recDosen.size();i++)
 				{
 					cout << "Nama Dosen :"<< recDosen[i].getNama() << endl;
 					cout << "Tanggal lahir :"<< recDosen[i].getTglLahir() << "-" << recDosen[i].getBulanLahir() << "-"<< recDosen[i].getTahunLahir() << endl;
@@ -138,7 +142,7 @@ int main()
 				break;
 			case 6:
 			{
-				for (unsigned i=0; i<= recTendik.size();i++)
+				for (unsigned i=0; i< recTendik.size();i++)
 				{
 					cout << "Nama Tenaga Didik :"<< recTendik[i].getNama() << endl;
 					cout << "Tanggal lahir :"<< recTendik[i].getTglLahir() << "-" << recTendik[i].getBulanLahir() << "-"<< recTendik[i].getTahunLahir() << endl;
