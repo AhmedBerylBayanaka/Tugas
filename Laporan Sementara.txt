@@ -1,0 +1,26 @@
+pada include/dosen.hpp :
+    1) string id -> int id 
+        alasan : Tadinya ditujukan agar mudah untuk diakses tapi tidak jadi.
+    2) penambahan deklarasi fungsi int getNPP() dan std::string getDepartemen(). 
+        alasan : agar dapat di outputkan kembali setelah menerima input.
+
+pada include/mahasiswa.hpp :
+    1) string id -> int id 
+        alasan : Tadinya ditujukan agar mudah untuk diakses tapi tidak jadi.
+    2) penambahan deklarasi fungsi std::string getNRP(); std::string getDepartemen(); dan int getTahunMasuk()
+       alasan : agar dapat di outputkan kembali setelah menerima input.
+    3) penambahan int semester ke dan int skslulus pada constructor
+        alasan : agar dapat menerima input dan dapat di outputkan kembali.
+
+pada include/person.hpp :
+    1) string id -> int id 
+        alasan : Tadinya ditujukan agar mudah untuk diakses tapi tidak jadi.
+
+pada include/tendik.hpp :
+    1) string id -> int id 
+        alasan : Tadinya ditujukan agar mudah untuk diakses tapi tidak jadi.
+    2) penambahan deklarasi fungsi std::string getNPP() dan std::string getUnit(). 
+        alasan : agar dapat di outputkan kembali setelah menerima input. 
+
+pada src/dosen.cpp:
+    
