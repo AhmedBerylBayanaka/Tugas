@@ -25,7 +25,7 @@ int mahasiswa::getSemester()
 
 void mahasiswa::setSKSLulus(int skslulus)
 {
-	this->skslulus = skslulus;
+	 this->skslulus = skslulus;
 }
 
 int mahasiswa::getSKSLulus()

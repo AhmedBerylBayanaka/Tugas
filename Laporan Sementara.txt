@@ -41,3 +41,6 @@ pada src/main.cpp :
         alasan : agar input nyaa dapat berupa kata yang dipisahkan oleh spasi.
     4)menambahkan rec***.push_back(object)
         alasan : agar setelah tiap pengisian, jumlahnya dapat terupdate.
+    5)penambahan case 7
+        penjelasan : menggunakan switch case pada line 168 ditujukan untuk memungkinkan user untuk mengubah 
+        beberapa data yang sudah diinputkan. 
