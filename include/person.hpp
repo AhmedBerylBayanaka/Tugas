@@ -6,11 +6,11 @@
 class person {
 private:
 	int id;
-	std::string nama;
-	int dd, mm, yy;
+	std::string nama, mm;
+	int dd, yy;
 
 public:
-	person(int id, std::string nama, int dd, int mm, int yy);
+	person(int id, std::string nama, int dd, std::string mm, int yy);
 
 	void setId(int id);
 	int getId();
@@ -18,9 +18,9 @@ public:
 	void setNama(std::string nama);
 	std::string getNama();
 
-	void setTglLahir(int dd, int mm, int yy);
+	void setTglLahir(int dd, std::string mm, int yy);
 	int getTglLahir();
-	int getBulanLahir();
+	std::string getBulanLahir();
 	int getTahunLahir();
 };
 

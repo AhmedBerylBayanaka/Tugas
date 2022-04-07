@@ -19,7 +19,7 @@ int main()
 	int menu_terpilih;
 
 	while(1) {
-		cout << "Selamat datang di Universitas Beryl" << endl << endl;
+		cout << "\n Selamat datang di Universitas Beryl" << endl << endl;
 		cout << "Data statistik:" << endl;
 		cout << "  1. Jumlah Mahasiswa             : " << recMhs.size() << " mahasiswa" << endl;
 		cout << "  2. Jumlah Dosen                 : " << recDosen.size() << " dosen" << endl;
@@ -32,25 +32,26 @@ int main()
 		cout << "  4. Tampilkan semua Mahasiswa" << endl;
 		cout << "  5. Tampilkan semua Dosen" << endl;
 		cout << "  6. Tampilkan semua Tenaga Kependidikan" << endl;
-		cout << "-> Silahkan memilih salah satu: ";
+		cout << "  7. edit data" << endl;
+		cout << "-> Silahkan memilih salah satu: " << endl;
 		cin >> menu_terpilih;
 		
 
 		switch (menu_terpilih) {
 			case 1:
 			{
-				string nrp,nama,departemen;
-				int id,dd,mm,yy,tahunmasuk,semesterke,skslulus;
-				 ++id;
+				string nrp,nama,departemen,mm;
+				int id,dd,yy,tahunmasuk,semesterke,skslulus;
+				//++id;
 
 				cout << "Masukkan Nama 	:";
 				cin.ignore();
 				getline(cin,nama);
-				cout << "Masukkan Hari Lahir (angka) :";
+				cout << "Masukkan Hari Lahir (dd) :";
 				cin >> dd;
-				cout << "Masukkan Bulan Lahir (angka) :";
+				cout << "Masukkan Bulan Lahir (month):";
 				cin >> mm; 
-				cout << "Masukkan Tahun Lahir :";
+				cout << "Masukkan Tahun Lahir (yyyy):";
 				cin >> yy;
 				cout << "Masukkan NRP :";
 				cin >> nrp;
@@ -70,16 +71,16 @@ int main()
 				break;
 			case 2:
 			{
-				string  nama, npp, departemen,pendidikan;
-				int id,dd, mm, yy;
+				string  nama, npp, departemen,pendidikan, mm;
+				int id,dd, yy;
 
 				cout << "Masukkan Nama :";
 				cin >> nama;
-				cout << "Masukkan Hari Lahir (angka) :";
+				cout << "Masukkan Hari Lahir (dd) :";
 				cin >> dd;
-				cout << "Masukkan Bulan Lahir (angka) :";
+				cout << "Masukkan Bulan Lahir (month) :";
 				cin >> mm; 
-				cout << "Masukkan Tahun Lahir :";
+				cout << "Masukkan Tahun Lahir (yyyy):";
 				cin >> yy;
 				cout << "Masukkan NPP :";
 				cin >> npp;
@@ -94,16 +95,16 @@ int main()
 				break;
 			case 3:
 			{
-				string  nama, npp, unit;
-				int id,dd, mm, yy;
+				string  nama, npp, unit, mm;
+				int id,dd, yy;
 
 				cout << "Masukkan Nama :";
 				cin >> nama;
-				cout << "Masukkan Hari Lahir (angka) :";
+				cout << "Masukkan Hari Lahir (dd) :";
 				cin >> dd;
-				cout << "Masukkan Bulan Lahir (angka) :";
+				cout << "Masukkan Bulan Lahir (month) :";
 				cin >> mm; 
-				cout << "Masukkan Tahun Lahir :";
+				cout << "Masukkan Tahun Lahir (yyyy):";
 				cin >> yy;
 				cout << "Masukkan NPP :";
 				cin >> npp;
@@ -117,9 +118,9 @@ int main()
 				break;
 			case 4:
 			{
-				for (unsigned i=0; i< recMhs.size();i++)
+				for (unsigned i=0; i < recMhs.size();i++)
 				{
-					cout << "Nama Mahasiswa :"<< recMhs[i].getNama() << endl;
+					cout << i + 1 << ")Nama Mahasiswa :"<< recMhs[i].getNama() << endl;
 					cout << "Tanggal lahir :"<< recMhs[i].getTglLahir() << "-" << recMhs[i].getBulanLahir() << "-"<< recMhs[i].getTahunLahir() << endl;
 					cout << "NRP :"<< recMhs[i].getNRP() << endl;
 					cout << "Departemen  :"<< recMhs[i].getDepartemen() << endl;
@@ -133,7 +134,7 @@ int main()
 			{
 				for (unsigned i=0; i< recDosen.size();i++)
 				{
-					cout << "Nama Dosen :"<< recDosen[i].getNama() << endl;
+					cout << i + 1 << ")Nama Dosen :"<< recDosen[i].getNama() << endl;
 					cout << "Tanggal lahir :"<< recDosen[i].getTglLahir() << "-" << recDosen[i].getBulanLahir() << "-"<< recDosen[i].getTahunLahir() << endl;
 					cout << "NPP :"<< recDosen[i].getNPP() << endl;
 					cout << "Departemen  :"<< recDosen[i].getDepartemen() << endl;
@@ -145,11 +146,51 @@ int main()
 			{
 				for (unsigned i=0; i< recTendik.size();i++)
 				{
-					cout << "Nama Tenaga Didik :"<< recTendik[i].getNama() << endl;
+					cout << i + 1 <<")Nama Tenaga Didik :"<< recTendik[i].getNama() << endl;
 					cout << "Tanggal lahir :"<< recTendik[i].getTglLahir() << "-" << recTendik[i].getBulanLahir() << "-"<< recTendik[i].getTahunLahir() << endl;
 					cout << "NPP :"<< recTendik[i].getNPP() << endl;
 					cout << "Unit  :"<< recTendik[i].getUnit() << endl << endl;
 				}
+			}
+				break;
+			case 7:
+			{
+				int ngedit;
+				int editMhs;
+				cout << "Silahkan pilih data yang ingin di edit:" << endl;
+				cout << "	1. Data Mahasiswa" << endl;
+				cout << "	2. Data Dosen" << endl;
+				cout << "	3. Data Tendik" << endl;
+				cin >> ngedit;
+					
+					switch (ngedit)
+					{
+						case 1:
+						{
+							cout << "Berikut data Mahasiswa yang ada :" << endl;
+							for (unsigned i=0; i < recMhs.size();i++)
+							{
+								cout << i + 1 << ")Nama Mahasiswa :"<< recMhs[i].getNama() << endl;
+								cout << "Tanggal lahir :"<< recMhs[i].getTglLahir() << "-" << recMhs[i].getBulanLahir() << "-"<< recMhs[i].getTahunLahir() << endl;
+								cout << "NRP :"<< recMhs[i].getNRP() << endl;
+								cout << "Departemen  :"<< recMhs[i].getDepartemen() << endl;
+								cout << "Tahun Masuk  :"<< recMhs[i].getTahunMasuk() << endl;
+								cout << "Semester ke- :"<< recMhs[i].getSemester() << endl;
+								cout << "SKS yang telah lulus :" << recMhs[i].getSKSLulus() << endl << endl;
+
+								cout << "Pilih data mahasiswa ke berapa yang ingin di edit :" ;
+								cin >> editMhs;
+
+								if(editMhs <= recMhs.size()){
+									 
+								}
+							}
+						}
+							break;
+					
+					default:
+						break;
+					}
 			}
 				break;
 		}

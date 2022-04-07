@@ -3,7 +3,7 @@
 using namespace std;
 #include "include/dosen.hpp"
 
-dosen::dosen(int id, std::string nama, int dd, int mm, int yy, std::string npp, std::string departemen, std::string pendidikan)
+dosen::dosen(int id, std::string nama, int dd, std::string mm, int yy, std::string npp, std::string departemen, std::string pendidikan)
 		: person(id, nama, dd, mm, yy), npp(npp), departemen(departemen), pendidikan(pendidikan)
 {
 }

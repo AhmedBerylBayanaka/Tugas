@@ -2,7 +2,7 @@
 #include "include/person.hpp"
 using namespace std;
 
-person::person(int id, std::string nama, int dd, int mm, int yy)
+person::person(int id, std::string nama, int dd, string mm, int yy)
 		: id(id), nama(nama), dd(dd), mm(mm), yy(yy)
 {
 }
@@ -27,7 +27,7 @@ std::string person::getNama()
 	return this->nama;
 }
 
-void person::setTglLahir(int dd, int mm, int yy)
+void person::setTglLahir(int dd, string mm, int yy)
 {
 	this->dd = dd;
 	this->mm = mm;
@@ -39,7 +39,7 @@ int person::getTglLahir()
 	return this->dd;
 }
 
-int person::getBulanLahir()
+string person::getBulanLahir()
 {
 	return this->mm;
 }

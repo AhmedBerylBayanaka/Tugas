@@ -2,7 +2,7 @@
 #include "include/tendik.hpp"
 
 
-tendik::tendik(int id, std::string nama, int dd, int mm, int yy, std::string npp, std::string unit)
+tendik::tendik(int id, std::string nama, int dd, std::string mm, int yy, std::string npp, std::string unit)
 		: person(id, nama, dd, mm, yy), npp(npp), unit(unit)
 {
 }

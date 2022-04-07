@@ -11,7 +11,7 @@ private:
 	std::string unit;
 
 public:
-	tendik(int id, std::string nama, int dd, int mm, int yy, std::string npp, std::string unit);
+	tendik(int id, std::string nama, int dd, std::string mm, int yy, std::string npp, std::string unit);
 
 	void setUnit(std::string unit);
 	std::string getUnit();	
