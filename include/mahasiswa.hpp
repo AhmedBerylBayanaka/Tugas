@@ -3,6 +3,8 @@
 
 
 #include <iostream>
+#include <string>
+#include <fstream>
 #include "include/person.hpp"
 
 class mahasiswa : public person {

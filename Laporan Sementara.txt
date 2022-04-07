@@ -1,26 +1,43 @@
-pada include/dosen.hpp :
+Perubahan global :
     1) string id -> int id 
         alasan : Tadinya ditujukan agar mudah untuk diakses tapi tidak jadi.
-    2) penambahan deklarasi fungsi int getNPP() dan std::string getDepartemen(). 
+
+pada include/dosen.hpp :
+    1) penambahan deklarasi fungsi int getNPP() dan std::string getDepartemen(). 
         alasan : agar dapat di outputkan kembali setelah menerima input.
 
 pada include/mahasiswa.hpp :
-    1) string id -> int id 
-        alasan : Tadinya ditujukan agar mudah untuk diakses tapi tidak jadi.
-    2) penambahan deklarasi fungsi std::string getNRP(); std::string getDepartemen(); dan int getTahunMasuk()
+    1) penambahan deklarasi fungsi std::string getNRP(); std::string getDepartemen(); dan int getTahunMasuk()
        alasan : agar dapat di outputkan kembali setelah menerima input.
-    3) penambahan int semester ke dan int skslulus pada constructor
+    2) penambahan int semester ke dan int skslulus pada constructor
         alasan : agar dapat menerima input dan dapat di outputkan kembali.
 
-pada include/person.hpp :
-    1) string id -> int id 
-        alasan : Tadinya ditujukan agar mudah untuk diakses tapi tidak jadi.
-
 pada include/tendik.hpp :
-    1) string id -> int id 
-        alasan : Tadinya ditujukan agar mudah untuk diakses tapi tidak jadi.
-    2) penambahan deklarasi fungsi std::string getNPP() dan std::string getUnit(). 
+    1) penambahan deklarasi fungsi std::string getNPP() dan std::string getUnit(). 
         alasan : agar dapat di outputkan kembali setelah menerima input. 
 
 pada src/dosen.cpp:
-    
+    1) penambahan definisi fungsi int getNPP() dan std::string getDepartemen(). 
+        alasan : agar dapat di outputkan kembali setelah menerima input.
+
+pada src/mahasiswa.cpp :
+    1) penambahan definisi fungsi std::string getNRP(); std::string getDepartemen(); dan int getTahunMasuk()
+       alasan : agar dapat di outputkan kembali setelah menerima input.
+    2) penambahan int semester ke dan int skslulus pada constructor
+        alasan : agar dapat menerima input dan dapat di outputkan kembali.
+
+pada src/tendik.cpp :
+    1) penambahan definisi fungsi std::string getNPP() dan std::string getUnit(). 
+        alasan : agar dapat di outputkan kembali setelah menerima input.
+
+pada src/main.cpp :
+    1)penambahan permintaan input dari user mulai dari case 1 - 3
+        alasan : melengkapi kode
+    2)penambahan logika loop pada case 4-6
+        alasan : untuk melengkapi kode dan menampilkan data yang telah diinputkan jika diinginkan
+    2)mengilangkan tanda titik dua (:) setelah break di beberapa case
+        alasan : menyebabkan program error
+    3)menggunakan #include <string> ; cin.ignore() dan getline(cin,...)
+        alasan : agar input nyaa dapat berupa kata yang dipisahkan oleh spasi.
+    4)menambahkan rec***.push_back(object)
+        alasan : agar setelah tiap pengisian, jumlahnya dapat terupdate.

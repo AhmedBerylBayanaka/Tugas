@@ -1,5 +1,8 @@
 #include <iostream>
 #include <vector>
+#include <string>
+#include <fstream>
+
 #include "include/mahasiswa.hpp"
 
 using namespace std;
@@ -70,6 +73,7 @@ std::vector<float> mahasiswa::getAllIPS()
 {
 	return this->ips;
 }
+
 
 
 

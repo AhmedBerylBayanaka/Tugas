@@ -6,6 +6,7 @@
 #include "include/mahasiswa.hpp"
 #include "include/dosen.hpp"
 #include "include/tendik.hpp"
+//#include "include/DBase.hpp"
 
 using namespace std;
 
@@ -152,7 +153,9 @@ int main()
 			}
 				break;
 		}
-	}
+	} 
+
+	//Dbase Database = Dbase("data.txt");
 
 	return 0;
 }
