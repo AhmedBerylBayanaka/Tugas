@@ -19,6 +19,7 @@ int main()
 	int menu_terpilih;
 
 	while(1) {
+
 		cout << "\n Selamat datang di Universitas Beryl" << endl << endl;
 		cout << "Data statistik:" << endl;
 		cout << "  1. Jumlah Mahasiswa             : " << recMhs.size() << " mahasiswa" << endl;
@@ -112,8 +113,7 @@ int main()
 				cin >> unit;
 
 				tendik TD(id, nama, dd, mm, yy, npp, unit);
-				recTendik.push_back(TD);
-				
+				recTendik.push_back(TD);	
 			}
 				break;
 			case 4:
@@ -183,7 +183,8 @@ int main()
 								cout << "Pilih data mahasiswa ke berapa yang ingin di edit : " ;
 								cin >> editMhs;
 
-								if((unsigned int)editMhs <= recMhs.size()){
+								if((unsigned int)editMhs <= recMhs.size())
+								{
 									
 									loop:
 									
@@ -193,7 +194,8 @@ int main()
 									
 									cin >> editMhs1;
 
-										if(editMhs1 == 1){
+										if(editMhs1 == 1)
+										{
 
 											cout << "Masukkan SKS lulus terupdate :";
 											cin >> numpang;
@@ -205,15 +207,19 @@ int main()
 											cin >> numpang;
 											recMhs[editMhs].setSemester(numpang);
 
-										}else {
+										}else
+										 {
 											goto loop;		
 										}
-										cout << "Apakah masih ingin mengedit? [y/n]: ";
-										cin >> nanya;
+											cout << "Apakah masih ingin mengedit? [y/n]: ";
+											cin >> nanya;
 
-										if(nanya == 'y'){
+										if(nanya == 'y')
+										{
 											goto loop;
-										}else {
+
+										}else 
+										{
 											cout << editMhs << ")Nama Mahasiswa :"<< recMhs[i].getNama() << endl;
 											cout << "Tanggal lahir :"<< recMhs[i].getTglLahir() << "-" << recMhs[i].getBulanLahir() << "-"<< recMhs[i].getTahunLahir() << endl;
 											cout << "NRP :"<< recMhs[i].getNRP() << endl;
@@ -227,8 +233,8 @@ int main()
 						}
 							break;
 					
-					case 2:
-					{
+						case 2:
+						{
 						cout << "Berikut data Dosen yang ada :" << endl;
 							for (unsigned i=0; i < recMhs.size();i++)
 							{
@@ -241,7 +247,8 @@ int main()
 								cout << "Pilih data dosen ke berapa yang ingin di edit : " ;
 								cin >> editMhs;
 
-								if((unsigned int)editMhs <= recDosen.size()){
+								if((unsigned int)editMhs <= recDosen.size())
+								{
 									
 									ulang:
 
@@ -252,11 +259,13 @@ int main()
 										cout << "Apakah masih ingin mengedit? [y/n]: ";
 										cin >> nanya;
 
-										if(nanya == 'y'){
+										if(nanya == 'y')
+										{
 
 											goto ulang;
 
-										}else {
+										}else 
+										{
 											cout << editMhs << ") Nama Dosen :"<< recDosen[i].getNama() << endl;
 											cout << " Tanggal lahir :"<< recDosen[i].getTglLahir() << "-" << recDosen[i].getBulanLahir() << "-"<< recDosen[i].getTahunLahir() << endl;
 											cout << " NPP :"<< recDosen[i].getNPP() << endl;
@@ -265,10 +274,10 @@ int main()
 										}
 								} 	
 							}
-					}
-						break;
-					case 3:
-					{
+						}
+							break;
+						case 3:
+						{
 						cout << "Berikut data Tenaga Didik yang ada :" << endl;
 							for (unsigned i=0; i < recMhs.size();i++)
 							{
@@ -280,7 +289,8 @@ int main()
 								cout << "Pilih data tenaga didik ke berapa yang ingin di edit : " ;
 								cin >> editMhs;
 
-								if((unsigned int)editMhs <= recDosen.size()){
+								if((unsigned int)editMhs <= recDosen.size())
+								{
 									
 									repeat:
 
@@ -291,11 +301,13 @@ int main()
 										cout << "Apakah masih ingin mengedit? [y/n]: ";
 										cin >> nanya;
 
-										if(nanya == 'y'){
+										if(nanya == 'y')
+										{
 
 											goto repeat;
 
-										}else {
+										}else 
+										{
 											cout << editMhs << ") Nama Tenaga Didik :"<< recTendik[i].getNama() << endl;
 											cout << " Tanggal lahir :"<< recTendik[i].getTglLahir() << "-" << recTendik[i].getBulanLahir() << "-"<< recTendik[i].getTahunLahir() << endl;
 											cout << " NPP :"<< recTendik[i].getNPP() << endl;
@@ -304,14 +316,18 @@ int main()
 								} 	
 							}
 					}
-					break;
+							break;
+					}
+			
 			}
 			break;
+			
 		}
-	} 
+	}
 
 	//Dbase Database = Dbase("data.txt");
+	return 0;}
+	
 
-	return 0;
-	}
-}
+
+
