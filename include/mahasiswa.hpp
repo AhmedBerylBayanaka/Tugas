@@ -30,10 +30,13 @@ public:
 	void hitungIPK();
 
 	std::string getNRP();
+	void setNRP(std::string nrp);
 
 	std::string getDepartemen();
+	void setDepartemen(std::string departemen);
 
 	int getTahunMasuk();
+	void setTahunmasuk(int tahunmasuk);
 
 	void setIPS(int semester, float ips);
 	float getIPS(int semester);

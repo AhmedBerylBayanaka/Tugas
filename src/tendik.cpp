@@ -22,3 +22,8 @@ std::string tendik::getNPP()
 {
 	return this->npp;
 }
+
+void tendik::setNPP(std::string npp)
+{
+	this->npp = npp;
+}

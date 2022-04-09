@@ -20,7 +20,9 @@ int main()
 
 	while(1) {
 
-		cout << "\n Selamat datang di Universitas Beryl" << endl << endl;
+		cout << "*********************************************" << endl;
+		cout << "Selamat datang di Universitas Beryl Cemerlang" << endl;
+		cout << "*********************************************" << endl << endl;
 		cout << "Data statistik:" << endl;
 		cout << "  1. Jumlah Mahasiswa             : " << recMhs.size() << " mahasiswa" << endl;
 		cout << "  2. Jumlah Dosen                 : " << recDosen.size() << " dosen" << endl;
@@ -45,6 +47,7 @@ int main()
 				int id,dd,yy,tahunmasuk,semesterke,skslulus;
 				//++id;
 
+				cout << "KELENGKAPAN DATA PRIBADI MAHASISWA" << endl;
 				cout << "Masukkan Nama 	:";
 				cin.ignore();
 				getline(cin,nama);
@@ -74,7 +77,8 @@ int main()
 			{
 				string  nama, npp, departemen,pendidikan, mm;
 				int id,dd, yy;
-
+				
+				cout << "KELENGKAPAN DATA PRIBADI Dosen" << endl;
 				cout << "Masukkan Nama :";
 				cin >> nama;
 				cout << "Masukkan Hari Lahir (dd) :";
@@ -99,6 +103,7 @@ int main()
 				string  nama, npp, unit, mm;
 				int id, dd, yy;
 
+				cout << "KELENGKAPAN DATA PRIBADI Tenaga Kependidikan" << endl;
 				cout << "Masukkan Nama :";
 				cin >> nama;
 				cout << "Masukkan Hari Lahir (dd) :";
@@ -146,7 +151,7 @@ int main()
 			{
 				for (unsigned i=0; i< recTendik.size();i++)
 				{
-					cout << i + 1 <<")Nama Tenaga Didik :"<< recTendik[i].getNama() << endl;
+					cout << i + 1 <<")Nama Tenaga Kependidikan :"<< recTendik[i].getNama() << endl;
 					cout << "Tanggal lahir :"<< recTendik[i].getTglLahir() << "-" << recTendik[i].getBulanLahir() << "-"<< recTendik[i].getTahunLahir() << endl;
 					cout << "NPP :"<< recTendik[i].getNPP() << endl;
 					cout << "Unit  :"<< recTendik[i].getUnit() << endl << endl;
@@ -155,9 +160,9 @@ int main()
 				break;
 			case 7:
 			{
-				int ngedit, editMhs, editMhs1, numpang;
+				int ngedit, editMhs, editMhs1, numpang, d, y, tahunMasuk, smstrUpdt, sksUpdt;
 				char nanya;
-				string numpang2;
+				string numpang2, m, nama, NRP, Departemen, pdkUpdt;
 
 				cout << "Silahkan pilih data yang ingin di edit:" << endl;
 				cout << "	1. Data Mahasiswa" << endl;
@@ -188,28 +193,113 @@ int main()
 									
 									loop:
 									
-									cout << "Pilih data yang hendak di edit: " ;
-									cout << "	1. SKS lulus";
-									cout << "	2. Semester";
+									cout << "Pilih data yang hendak di edit: ";
+									cout << "	1. Nama";
+									cout << "	2. Tanggal Lahir";
+									cout << "	3. NRP";
+									cout << "	4. Departemen";
+									cout << "	5. Tahun Masuk";
+									cout << "	6. Semester";
+									cout << "	7. SKS";
+									cout << "	8. Semua data";
 									
 									cin >> editMhs1;
-
-										if(editMhs1 == 1)
+										switch (editMhs1)
 										{
+										case 1:
+											{
+												cout << "Masukkan Nama yang benar :";
+												cin >> numpang2;
 
-											cout << "Masukkan SKS lulus terupdate :";
-											cin >> numpang;
-											recMhs[editMhs].setSKSLulus(numpang);
+												recMhs[editMhs].setNama(numpang2);
+											}
+											break;
+										case 2:
+											{
+												cout << "Masukkan Tanggal Lahir yang benar (dd month yyyy):";
+												cin >> d >> m >> y;
+
+												recMhs[editMhs].setTglLahir(d,m,y);
+											}
+											break;
+										case 3:
+											{
+												cout << "Masukkan NRP yang benar :";
+												cin >> numpang2;
+
+												recMhs[editMhs].setNRP(numpang2);
+											}
+											break;
+										case 4:
+											{
+												cout << "Masukkan Departemen yang benar :";
+												cin >> numpang2;
+
+												recMhs[editMhs].setDepartemen(numpang2);
+											}
+											break;
+										case 5:
+											{
+												cout << "Masukkan Tahun Masuk yang benar :";
+												cin >> numpang;
+
+												recMhs[editMhs].setTahunmasuk(numpang);
+											}
+											break;
+										case 6:
+											{
+												cout << "Masukkan semester terupdate :";
+												cin >> numpang;
+												recMhs[editMhs].setSemester(numpang);
+											}
+											break;
+										case 7:
+											{
+												cout << "Masukkan SKS lulus terupdate :";
+												cin >> numpang;
+
+												recMhs[editMhs].setSKSLulus(numpang);
+											}
+											break;
+										case 8:
+											{
+												cout << "Masukkan Nama yang benar :";
+												cin >> nama;
+
+												recMhs[editMhs].setNama(nama);
 											
-										}else if(editMhs1 == 2){
+										
+												cout << "Masukkan Tanggal Lahir yang benar (dd month yyyy):";
+												cin >> d >> m >> y;
 
-											cout << "Masukkan semester terupdate :";
-											cin >> numpang;
-											recMhs[editMhs].setSemester(numpang);
+												recMhs[editMhs].setTglLahir(d,m,y);
+											
+												cout << "Masukkan NRP yang benar :";
+												cin >> NRP;
 
-										}else
-										 {
-											goto loop;		
+												recMhs[editMhs].setNRP(NRP);
+											
+										
+												cout << "Masukkan Departemen yang benar :";
+												cin >> Departemen;
+
+												recMhs[editMhs].setDepartemen(Departemen);
+											
+												cout << "Masukkan Tahun Masuk yang benar :";
+												cin >> tahunMasuk;
+
+												recMhs[editMhs].setTahunmasuk(tahunMasuk);
+											
+												cout << "Masukkan semester terupdate :";
+												cin >> smstrUpdt;
+												recMhs[editMhs].setSemester(smstrUpdt);
+											
+												cout << "Masukkan SKS lulus terupdate :";
+												cin >> sksUpdt;
+
+												recMhs[editMhs].setSKSLulus(sksUpdt);
+											}
+											break;
 										}
 											cout << "Apakah masih ingin mengedit? [y/n]: ";
 											cin >> nanya;
@@ -248,16 +338,89 @@ int main()
 								cin >> editMhs;
 
 								if((unsigned int)editMhs <= recDosen.size())
-								{
-									
+								{	
 									ulang:
+									
+									cout << "Pilih data yang hendak di edit: ";
+									cout << "	1. Nama";
+									cout << "	2. Tanggal Lahir";
+									cout << "	3. NPP";
+									cout << "	4. Departemen";
+									cout << "	5. Pendidikan Terakhir";
+									cout << "	6. Semua data";
+									
+									cin >> editMhs1;
+										switch (editMhs1)
+										{
+										case 1:
+											{
+												cout << "Masukkan Nama yang benar :";
+												cin >> numpang2;
 
-										cout << "Masukkan Pendidikan terakhir terupdate :";
-										cin >> numpang;
-										recDosen[editMhs].setPendidikan(numpang2);
-										
-										cout << "Apakah masih ingin mengedit? [y/n]: ";
-										cin >> nanya;
+												recDosen[editMhs].setNama(numpang2);
+											}
+											break;
+										case 2:
+											{
+												cout << "Masukkan Tanggal Lahir yang benar (dd month yyyy):";
+												cin >> d >> m >> y;
+
+												recDosen[editMhs].setTglLahir(d,m,y);
+											}
+											break;
+										case 3:
+											{
+												cout << "Masukkan NPP yang benar :";
+												cin >> numpang2;
+
+												recDosen[editMhs].setNPP(numpang2);
+											}
+											break;
+										case 4:
+											{
+												cout << "Masukkan Departemen yang benar :";
+												cin >> numpang2;
+
+												recDosen[editMhs].setDepartemen(numpang2);
+											}
+											break;
+										case 5:
+											{
+												cout << "Masukkan Pendidikan terakhir :";
+												cin >> numpang2;
+
+												recDosen[editMhs].setPendidikan(numpang2);
+											}
+											break;
+										case 6:
+											{
+												cout << "Masukkan Nama yang benar :";
+												cin >> nama;
+
+												recDosen[editMhs].setNama(nama);
+											
+												cout << "Masukkan Tanggal Lahir yang benar (dd month yyyy):";
+												cin >> d >> m >> y;
+
+												recDosen[editMhs].setTglLahir(d,m,y);
+											
+												cout << "Masukkan NPP yang benar :";
+												cin >> NRP;
+
+												recDosen[editMhs].setNPP(NRP);
+											
+												cout << "Masukkan Departemen yang benar :";
+												cin >> Departemen;
+
+												recDosen[editMhs].setDepartemen(Departemen);
+											
+												cout << "Masukkan Pendidikan terakhir :";
+												cin >> pdkUpdt;
+
+												recDosen[editMhs].setPendidikan(pdkUpdt);
+											}
+											break;
+										}
 
 										if(nanya == 'y')
 										{
@@ -294,12 +457,73 @@ int main()
 									
 									repeat:
 
-										cout << "Masukkan Pendidikan terakhir terupdate :";
-										cin >> numpang;
-										recTendik[editMhs].setUnit(numpang2);
+									cout << "Pilih data yang hendak di edit: ";
+									cout << "	1. Nama";
+									cout << "	2. Tanggal Lahir";
+									cout << "	3. NPP";
+									cout << "	4. Unit";
+									cout << "	5. Semua data";
+									
+									cin >> editMhs1;
+										switch (editMhs1)
+										{
+										case 1:
+											{
+												cout << "Masukkan Nama yang benar :";
+												cin >> numpang2;
+
+												recTendik[editMhs].setNama(numpang2);
+											}
+											break;
+										case 2:
+											{
+												cout << "Masukkan Tanggal Lahir yang benar (dd month yyyy):";
+												cin >> d >> m >> y;
+
+												recTendik[editMhs].setTglLahir(d,m,y);
+											}
+											break;
+										case 3:
+											{
+												cout << "Masukkan NPP yang benar :";
+												cin >> numpang2;
+
+												recTendik[editMhs].setNPP(numpang2);
+											}
+											break;
+										case 4:
+											{
+												cout << "Masukkan Unit yang benar :";
+												cin >> numpang2;
+
+												recTendik[editMhs].setUnit(numpang2);
+											}
+											break;
 										
-										cout << "Apakah masih ingin mengedit? [y/n]: ";
-										cin >> nanya;
+										case 5:
+											{
+												cout << "Masukkan Nama yang benar :";
+												cin >> nama;
+
+												recTendik[editMhs].setNama(nama);
+											
+												cout << "Masukkan Tanggal Lahir yang benar (dd month yyyy):";
+												cin >> d >> m >> y;
+
+												recTendik[editMhs].setTglLahir(d,m,y);
+											
+												cout << "Masukkan NPP yang benar :";
+												cin >> NRP;
+
+												recTendik[editMhs].setNPP(NRP);
+											
+												cout << "Masukkan Unit yang benar :";
+												cin >> Departemen;
+
+												recTendik[editMhs].setUnit(Departemen);
+											}
+											break;
+										}
 
 										if(nanya == 'y')
 										{

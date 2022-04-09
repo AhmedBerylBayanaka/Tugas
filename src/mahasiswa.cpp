@@ -37,6 +37,10 @@ void mahasiswa::hitungIPK()
 {
 }
 
+void mahasiswa::setNRP(std::string nrp)
+{
+	this->nrp = nrp;
+}
 void mahasiswa::setIPS(int semester, float ips)
 {
 	// semester mulai dari 1
@@ -59,6 +63,11 @@ string mahasiswa::getDepartemen()
 	return this->departemen;
 }
 
+void mahasiswa::setDepartemen(std::string departemen)
+{
+	this->departemen = departemen;
+}
+
 string mahasiswa::getNRP()
 {
 	return this->nrp;
@@ -68,6 +77,12 @@ int mahasiswa::getTahunMasuk()
 {
 	return this->tahunmasuk;
 }
+
+void mahasiswa::setTahunmasuk(int tahunmasuk)
+{
+	this->tahunmasuk = tahunmasuk;
+}
+
 
 std::vector<float> mahasiswa::getAllIPS()
 {

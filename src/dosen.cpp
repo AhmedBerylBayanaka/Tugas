@@ -22,7 +22,15 @@ int dosen::getNPP()
 {
 	this->npp;
 }
+void dosen::setNPP(std::string npp)
+{
+	this->npp = npp;
+}
 string dosen::getDepartemen()
 {
 	this->departemen;
+}
+void dosen::setDepartemen(std::string departemen)
+{
+	this->departemen = departemen;
 }
