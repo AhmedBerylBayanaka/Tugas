@@ -1,46 +1,18 @@
-Perubahan global :
-    1) string id -> int id 
-        alasan : Tadinya ditujukan agar mudah untuk diakses tapi tidak jadi.
+*******************************************************************************
+*****************************LAPORAN SEMENTARA*********************************
+**********AHMED BERYL BAYANAKA ** 5024211054 ** TEKNIK KOMPUTER****************
+*******************************************************************************
 
-pada include/dosen.hpp :
-    1) penambahan deklarasi fungsi int getNPP() dan std::string getDepartemen(). 
-        alasan : agar dapat di outputkan kembali setelah menerima input.
-
-pada include/mahasiswa.hpp :
-    1) penambahan deklarasi fungsi std::string getNRP(); std::string getDepartemen(); dan int getTahunMasuk()
-       alasan : agar dapat di outputkan kembali setelah menerima input.
-    2) penambahan int semester ke dan int skslulus pada constructor
-        alasan : agar dapat menerima input dan dapat di outputkan kembali.
-
-pada include/tendik.hpp :
-    1) penambahan deklarasi fungsi std::string getNPP() dan std::string getUnit(). 
-        alasan : agar dapat di outputkan kembali setelah menerima input. 
-
-pada src/dosen.cpp:
-    1) penambahan definisi fungsi int getNPP() dan std::string getDepartemen(). 
-        alasan : agar dapat di outputkan kembali setelah menerima input.
-
-pada src/mahasiswa.cpp :
-    1) penambahan definisi fungsi std::string getNRP(); std::string getDepartemen(); dan int getTahunMasuk()
-       alasan : agar dapat di outputkan kembali setelah menerima input.
-    2) penambahan int semester ke dan int skslulus pada constructor
-        alasan : agar dapat menerima input dan dapat di outputkan kembali.
-
-pada src/tendik.cpp :
-    1) penambahan definisi fungsi std::string getNPP() dan std::string getUnit(). 
-        alasan : agar dapat di outputkan kembali setelah menerima input.
-
-pada src/main.cpp :
-    1)penambahan permintaan input dari user mulai dari case 1 - 3
-        alasan : melengkapi kode
-    2)penambahan logika loop pada case 4-6
-        alasan : untuk melengkapi kode dan menampilkan data yang telah diinputkan jika diinginkan
-    2)mengilangkan tanda titik dua (:) setelah break di beberapa case
-        alasan : menyebabkan program error
-    3)menggunakan #include <string> ; cin.ignore() dan getline(cin,...)
-        alasan : agar input nyaa dapat berupa kata yang dipisahkan oleh spasi.
-    4)menambahkan rec***.push_back(object)
-        alasan : agar setelah tiap pengisian, jumlahnya dapat terupdate.
-    5)penambahan case 7
-        penjelasan : menggunakan switch case pada line 168 ditujukan untuk memungkinkan user untuk mengubah 
-        beberapa data yang sudah diinputkan. 
+->Update pada nama universitas agar terlihat lebih menarik
+->User akan diminta untuk mengisi kelengkapan data pribadi mahasiswa
+->Untuk beberapa input, digunakan #include <string> ; cin.ignore() ; dan 
+getline(cin,nama) agar dapat menerima input berupa string yang dipisahkan
+oleh spasi
+->memanggil class mahasiswa untuk melempar input yang sudah dimasukkan
+->menggunakan push_back(objecttype) untuk menambahkan jumlahnya
+->untuk menampilkan kembali data yang sudah disimpan, user dapat memilih case 4.
+logika yang digunakan adalah for loop dengan limit vector.size()
+->untuk mengedit data yang sudah diinputkan, user dapat memilih case 7. Pada case
+ini digunakan fungsi set***(***) yang sudah ditambahkan pada ***.cpp dan .hpp
+->memunculkan hasil data yang telah diedit pada interface user.
+->menggunakan goto jika user ingin mengedit kembali.

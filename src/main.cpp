@@ -76,9 +76,9 @@ int main()
 			case 2:
 			{
 				string  nama, npp, departemen,pendidikan, mm;
-				int id,dd, yy;
+				int id, dd, yy;
 				
-				cout << "KELENGKAPAN DATA PRIBADI Dosen" << endl;
+				cout << "KELENGKAPAN DATA PRIBADI DOSEN" << endl;
 				cout << "Masukkan Nama :";
 				cin >> nama;
 				cout << "Masukkan Hari Lahir (dd) :";
@@ -103,7 +103,7 @@ int main()
 				string  nama, npp, unit, mm;
 				int id, dd, yy;
 
-				cout << "KELENGKAPAN DATA PRIBADI Tenaga Kependidikan" << endl;
+				cout << "KELENGKAPAN DATA PRIBADI TENAGA KEPENDIDIKAN" << endl;
 				cout << "Masukkan Nama :";
 				cin >> nama;
 				cout << "Masukkan Hari Lahir (dd) :";
