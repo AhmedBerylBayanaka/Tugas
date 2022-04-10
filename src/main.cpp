@@ -209,7 +209,8 @@ int main()
 										case 1:
 											{
 												cout << "Masukkan Nama yang benar :";
-												cin >> numpang2;
+												cin.ignore();
+												getline(cin,numpang2);
 
 												recMhs[editMhs].setNama(numpang2);
 											}
@@ -233,7 +234,8 @@ int main()
 										case 4:
 											{
 												cout << "Masukkan Departemen yang benar :";
-												cin >> numpang2;
+												cin.ignore();
+												getline(cin,numpang2);
 
 												recMhs[editMhs].setDepartemen(numpang2);
 											}
@@ -264,7 +266,8 @@ int main()
 										case 8:
 											{
 												cout << "Masukkan Nama yang benar :";
-												cin >> nama;
+												cin.ignore();
+												getline(cin,nama);
 
 												recMhs[editMhs].setNama(nama);
 											
@@ -281,7 +284,8 @@ int main()
 											
 										
 												cout << "Masukkan Departemen yang benar :";
-												cin >> Departemen;
+												cin.ignore();
+												getline(cin,Departemen);
 
 												recMhs[editMhs].setDepartemen(Departemen);
 											
@@ -355,7 +359,8 @@ int main()
 										case 1:
 											{
 												cout << "Masukkan Nama yang benar :";
-												cin >> numpang2;
+												cin.ignore();
+												getline(cin,numpang2);
 
 												recDosen[editMhs].setNama(numpang2);
 											}
@@ -379,7 +384,8 @@ int main()
 										case 4:
 											{
 												cout << "Masukkan Departemen yang benar :";
-												cin >> numpang2;
+												cin.ignore();
+												getline(cin,numpang2);
 
 												recDosen[editMhs].setDepartemen(numpang2);
 											}
@@ -387,7 +393,8 @@ int main()
 										case 5:
 											{
 												cout << "Masukkan Pendidikan terakhir :";
-												cin >> numpang2;
+												cin.ignore();
+												getline(cin,numpang2);
 
 												recDosen[editMhs].setPendidikan(numpang2);
 											}
@@ -410,12 +417,14 @@ int main()
 												recDosen[editMhs].setNPP(NRP);
 											
 												cout << "Masukkan Departemen yang benar :";
-												cin >> Departemen;
+												cin.ignore();
+												getline(cin,Departemen);
 
 												recDosen[editMhs].setDepartemen(Departemen);
 											
 												cout << "Masukkan Pendidikan terakhir :";
-												cin >> pdkUpdt;
+												cin.ignore();
+												getline(cin,pdkUpdt);
 
 												recDosen[editMhs].setPendidikan(pdkUpdt);
 											}
@@ -470,7 +479,8 @@ int main()
 										case 1:
 											{
 												cout << "Masukkan Nama yang benar :";
-												cin >> numpang2;
+												cin.ignore();
+												getline(cin,numpang2);
 
 												recTendik[editMhs].setNama(numpang2);
 											}
@@ -494,7 +504,8 @@ int main()
 										case 4:
 											{
 												cout << "Masukkan Unit yang benar :";
-												cin >> numpang2;
+												cin.ignore();
+												getline(cin,numpang2);
 
 												recTendik[editMhs].setUnit(numpang2);
 											}
@@ -503,7 +514,8 @@ int main()
 										case 5:
 											{
 												cout << "Masukkan Nama yang benar :";
-												cin >> nama;
+												cin.ignore();
+												getline(cin,nama);
 
 												recTendik[editMhs].setNama(nama);
 											
