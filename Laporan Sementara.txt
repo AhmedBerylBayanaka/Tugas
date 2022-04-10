@@ -8,7 +8,8 @@
 ->Untuk beberapa input, digunakan #include <string> ; cin.ignore() ; dan 
 getline(cin,nama) agar dapat menerima input berupa string yang dipisahkan
 oleh spasi
-->memanggil class mahasiswa untuk melempar input yang sudah dimasukkan
+->memanggil class mahasiswa untuk melempar input yang sudah dimasukkan (parameter dan
+constructor ditambahkan untuk menerima lebih banyak input)
 ->menggunakan push_back(objecttype) untuk menambahkan jumlahnya
 ->untuk menampilkan kembali data yang sudah disimpan, user dapat memilih case 4.
 logika yang digunakan adalah for loop dengan limit vector.size()
