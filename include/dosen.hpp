@@ -17,7 +17,7 @@ public:
 	std::string getPendidikan();
 
 	void setNPP(std::string npp);
-	int getNPP();
+	string getNPP();
 	
 	std::string getDepartemen();
 	void setDepartemen(std::string departemen);
