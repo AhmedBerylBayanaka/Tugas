@@ -11,7 +11,7 @@
 using namespace std;
 
 int main()
-{
+{ 
 	vector<mahasiswa> recMhs;
 	vector<dosen> recDosen;
 	vector<tendik> recTendik;
@@ -35,7 +35,8 @@ int main()
 		cout << "  4. Tampilkan semua Mahasiswa" << endl;
 		cout << "  5. Tampilkan semua Dosen" << endl;
 		cout << "  6. Tampilkan semua Tenaga Kependidikan" << endl;
-		cout << "  7. edit data" << endl;
+		//dari sini
+		cout << "  7. edit data" << endl; 
 		cout << "-> Silahkan memilih salah satu: " << endl;
 		cin >> menu_terpilih;
 		
@@ -48,7 +49,7 @@ int main()
 				//++id;
 
 				cout << "KELENGKAPAN DATA PRIBADI MAHASISWA" << endl;
-				cout << "Masukkan Nama 	:";
+				cout << "Masukkan Nama 	:"; //Ahmed ber
 				cin.ignore();
 				getline(cin,nama);
 				cout << "Masukkan Hari Lahir (dd) :";
@@ -430,7 +431,8 @@ int main()
 											}
 											break;
 										}
-
+											cout << "Apakah masih ingin mengedit? [y/n]: ";
+											cin >> nanya;
 										if(nanya == 'y')
 										{
 
@@ -536,7 +538,8 @@ int main()
 											}
 											break;
 										}
-
+											cout << "Apakah masih ingin mengedit? [y/n]: ";
+											cin >> nanya;
 										if(nanya == 'y')
 										{
 
