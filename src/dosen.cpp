@@ -3,6 +3,8 @@
 using namespace std;
 #include "include/dosen.hpp"
 
+using namespace std;
+
 dosen::dosen(int id, std::string nama, int dd, std::string mm, int yy, std::string npp, std::string departemen, std::string pendidikan)
 		: person(id, nama, dd, mm, yy), npp(npp), departemen(departemen), pendidikan(pendidikan)
 {
@@ -18,7 +20,7 @@ string dosen::getPendidikan()
 	return this->pendidikan;
 }
 
-string dosen::getNPP()
+std::string dosen::getNPP()
 {
 	return this->npp;
 }
