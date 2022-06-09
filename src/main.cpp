@@ -41,11 +41,11 @@ int main()
 		cin >> menu_terpilih;
 		
 
+				int id,dd,yy,tahunmasuk,semesterke,skslulus;
 		switch (menu_terpilih) {
 			case 1:
 			{
 				string nrp,nama,departemen,mm;
-				int id,dd,yy,tahunmasuk,semesterke,skslulus;
 				//++id;
 
 				cout << "KELENGKAPAN DATA PRIBADI MAHASISWA" << endl;
@@ -563,10 +563,9 @@ int main()
 			
 		}
 	}
-
-	//Dbase Database = Dbase("data.txt");
-	return 0;}
-	
+		
+	return 0;
+}
 
 
 
