@@ -69,7 +69,7 @@ int main()
 				cin >> semesterke;
 				cout << "Masukkan SKS yang telah lulus :";
 				cin >> skslulus;
-				cout << "Masukkan Mata Kuliah yang diikuti di Semester ini";
+				cout << "Masukkan Mata Kuliah yang diikuti di Semester ini :";
 				cin.ignore();
 				getline(cin,matkul);
 				mahasiswa Mahasiswa(id, nama, dd, mm, yy, nrp, departemen, tahunmasuk, semesterke, skslulus, matkul);
@@ -134,7 +134,8 @@ int main()
 					cout << "Departemen  :"<< recMhs[i].getDepartemen() << endl;
 					cout << "Tahun Masuk  :"<< recMhs[i].getTahunMasuk() << endl;
 					cout << "Semester ke- :"<< recMhs[i].getSemester() << endl;
-					cout << "SKS yang telah lulus :" << recMhs[i].getSKSLulus() << endl << endl;
+					cout << "SKS yang telah lulus :" << recMhs[i].getSKSLulus() << endl;
+					cout << "Matkul yang diikuti :" << recMhs[i].getMatkul() << endl << endl;
 				}
 			}
 				break;
