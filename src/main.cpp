@@ -41,11 +41,11 @@ int main()
 		cin >> menu_terpilih;
 		
 
-				int id,dd,yy,tahunmasuk,semesterke,skslulus;
 		switch (menu_terpilih) {
 			case 1:
 			{
-				string nrp,nama,departemen,mm;
+				int id,dd,yy,tahunmasuk,semesterke,skslulus;
+				string nrp,nama,departemen,mm,matkul;
 				//++id;
 
 				cout << "KELENGKAPAN DATA PRIBADI MAHASISWA" << endl;
@@ -69,8 +69,10 @@ int main()
 				cin >> semesterke;
 				cout << "Masukkan SKS yang telah lulus :";
 				cin >> skslulus;
-
-				mahasiswa Mahasiswa(id, nama, dd, mm, yy, nrp, departemen, tahunmasuk, semesterke, skslulus);
+				cout << "Masukkan Mata Kuliah yang diikuti di Semester ini";
+				cin.ignore();
+				getline(cin,matkul);
+				mahasiswa Mahasiswa(id, nama, dd, mm, yy, nrp, departemen, tahunmasuk, semesterke, skslulus, matkul);
 				recMhs.push_back(Mahasiswa);
 			}
 				break;

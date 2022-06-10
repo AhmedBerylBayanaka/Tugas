@@ -2,6 +2,7 @@
 #define __DOSEN_HPP__
 
 #include <iostream>
+#include <string>
 #include "include/person.hpp"
 
 class dosen : public person {
@@ -17,7 +18,7 @@ public:
 	std::string getPendidikan();
 
 	void setNPP(std::string npp);
-	string getNPP();
+	std::string getNPP();
 	
 	std::string getDepartemen();
 	void setDepartemen(std::string departemen);

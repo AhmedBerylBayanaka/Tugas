@@ -2,6 +2,7 @@
 
 using namespace std;
 #include "include/dosen.hpp"
+#include <string>
 
 using namespace std;
 

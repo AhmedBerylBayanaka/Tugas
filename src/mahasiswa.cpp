@@ -8,8 +8,8 @@
 using namespace std;
 
 mahasiswa::mahasiswa(int id, std::string nama, int dd, std::string mm, int yy, 
-				std::string nrp, std::string departemen, int tahunmasuk, int semesterke,int skslulus)
-		: person(id, nama, dd, mm, yy), nrp(nrp), departemen(departemen), tahunmasuk(tahunmasuk), semesterke(semesterke), skslulus(skslulus)
+				std::string nrp, std::string departemen, int tahunmasuk, int semesterke,int skslulus, std::string matkul)
+		: person(id, nama, dd, mm, yy), nrp(nrp), departemen(departemen), tahunmasuk(tahunmasuk), semesterke(semesterke), skslulus(skslulus), matkul(matkul)
 {
 }
 
@@ -89,6 +89,14 @@ std::vector<float> mahasiswa::getAllIPS()
 	return this->ips;
 }
 
+std::string mahasiswa::getMatkul()
+{
+	return  this->matkul;
+}
 
+void mahasiswa::setMatkul(std::string matkul)
+{
+	this->matkul = matkul;
+}
 
 
