@@ -72,6 +72,7 @@ int main()
 				cout << "Masukkan Mata Kuliah yang diikuti di Semester ini :";
 				cin.ignore();
 				getline(cin,matkul);
+				
 				mahasiswa Mahasiswa(id, nama, dd, mm, yy, nrp, departemen, tahunmasuk, semesterke, skslulus, matkul);
 				recMhs.push_back(Mahasiswa);
 			}
@@ -205,7 +206,8 @@ int main()
 									cout << "	5. Tahun Masuk";
 									cout << "	6. Semester";
 									cout << "	7. SKS";
-									cout << "	8. Semua data";
+									cout << "	8. Mata Kuliah Aktif";
+									cout << "	9. Semua data";
 									
 									cin >> editMhs1;
 										switch (editMhs1)
@@ -268,6 +270,14 @@ int main()
 											}
 											break;
 										case 8:
+											{
+												cout << "Masukkan Mata Kuliah Aktif (Semua) :";
+												cin.ignore();
+												getline(cin,numpang2);
+
+												recMhs[editMhs].setMatkul(numpang2);
+											}
+										case 9:
 											{
 												cout << "Masukkan Nama yang benar :";
 												cin.ignore();
